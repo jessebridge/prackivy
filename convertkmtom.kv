@@ -11,14 +11,20 @@ BoxLayout:
             orientation: 'vertical'
             Button:
                 text: 'Up'
-                onpress
+                on_press: app.handle_calculate_positive(int(input_number.text))
             Button:
                 text: 'Down'
-
+                on_press: app.handle_calculate_negative(int(input_number.text))
 
     BoxLayout:
         orientation: 'horizontal'
         Button:
             text: 'convert m to km'
+            on_press: app.handle_convert(int(input_number.text))
     BoxLayout:
         orientation: 'horizontal'
+        Label:
+            id: output_label
+            font_size: 48
+            color: (1,.5,.7,1)
+
